@@ -1,0 +1,29 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+div.panel {
+  max-width: 700px;
+  margin: 150px auto 0;
+}
+
+.table {
+  width: 100%;
+}
+.table tr td {
+  margin: 0;
+}
+
+.todolist {
+  width: 70%;
+  float: left;
+  p {
+    margin: 0;
+    padding: 1em;
+    font-weight: 100
+  }
+}
+
+.opciones_td {
+  float: left;
+  padding: 1em 0;
+  text-align: center;
+  width: 30%;
+}

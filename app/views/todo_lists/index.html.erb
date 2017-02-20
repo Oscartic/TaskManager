@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+
+  <div class="panel panel-default">
+    <!-- Cabezera -->
+    <div class="panel-heading">
+      <h1>Lista TaskManager</h1>
+    </div>
+    <!-- cuerpo -->
+    <div class="panel-body">
+    <% @todo_lists.each do |todo_list| %>
+      <div class="table-responsive">
+        <table class="table">
+          <tbody>
+            <tr>
+
+              <td class="todolist">
+                <p><strong>Nombre: </strong> <%= todo_list.title %></p>
+                <p><strong>Descripción: </strong> <%= todo_list.description %></p>
+              </td>
+
+              <td class="opciones_td">
+                <%= link_to 'M', todo_list %>
+                <%= link_to 'E', edit_todo_list_path(todo_list) %>
+                <%= link_to 'E', todo_list, method: :delete, data: { confirm: '¿Estas seguro?' } %>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    <% end %>
+    </div>
+    <!-- pie -->
+    <div class="panel-footer">
+      <%= link_to 'Nueva tarea', new_todo_list_path %>
+    </div>
+
+  </div>
+
+</div>
